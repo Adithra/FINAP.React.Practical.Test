@@ -15,8 +15,6 @@ namespace FINAP___React_Practical_Test
 
         public int SubjectID { get; set; }
 
-        public virtual List<Teacher> Teacher { get; set; }
-
         public virtual List<Subject> Subject { get; set; }
     }
 }

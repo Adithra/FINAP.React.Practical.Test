@@ -26,5 +26,7 @@ namespace FINAP___React_Practical_Test
         [Required]
         [StringLength(50)]
         public string EmailAddress { get; set; }
+
+        public virtual List<AllocateSubject> AllocateSubjects { get; set; }
     }
 }

@@ -16,7 +16,5 @@ namespace FINAP___React_Practical_Test
         public int ClassroomID { get; set; }
 
         public virtual  List<Teacher> Teachers { get; set; }
-
-        public virtual  List<Classroom> Classrooms { get; set; }
     }
 }
