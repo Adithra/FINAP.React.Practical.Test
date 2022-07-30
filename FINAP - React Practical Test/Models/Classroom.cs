@@ -8,7 +8,7 @@ namespace FINAP___React_Practical_Test
     [Table("Classroom")]
     public partial class Classroom
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int ClassroomID { get; set; }
 
         [Required]

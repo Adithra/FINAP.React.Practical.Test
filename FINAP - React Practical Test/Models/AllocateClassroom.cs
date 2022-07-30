@@ -8,11 +8,15 @@ namespace FINAP___React_Practical_Test
     [Table("AllocateClassroom")]
     public partial class AllocateClassroom
     {
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key]
         public int AllocateClassroomID { get; set; }
 
         public int TeacherID { get; set; }
 
         public int ClassroomID { get; set; }
+
+        public virtual  List<Teacher> Teachers { get; set; }
+
+        public virtual  List<Classroom> Classrooms { get; set; }
     }
 }

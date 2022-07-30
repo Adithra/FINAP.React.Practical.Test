@@ -8,11 +8,15 @@ namespace FINAP___React_Practical_Test
     [Table("AllocateSubject")]
     public partial class AllocateSubject
     {
-        [StringLength(10)]
-        public string AllocateSubjectID { get; set; }
+        [Key]
+        public int AllocateSubjectID { get; set; }
 
         public int TeacherID { get; set; }
 
         public int SubjectID { get; set; }
+
+        public virtual List<Teacher> Teacher { get; set; }
+
+        public virtual List<Subject> Subject { get; set; }
     }
 }
