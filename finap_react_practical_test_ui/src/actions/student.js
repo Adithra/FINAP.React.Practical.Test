@@ -13,7 +13,7 @@ const formateData = data => ({
 })
 
 export const fetchAll = () => dispatch => {
-    api.student().fetchAll()
+    api.students().fetchAll()
         .then(response => {
             dispatch({
                 type: ACTION_TYPES.FETCH_ALL,
@@ -25,7 +25,7 @@ export const fetchAll = () => dispatch => {
 
 export const create = (data, onSuccess) => dispatch => {
     data = formateData(data)
-    api.student().create(data)
+    api.students().create(data)
         .then(res => {
             dispatch({
                 type: ACTION_TYPES.CREATE,
@@ -38,7 +38,7 @@ export const create = (data, onSuccess) => dispatch => {
 
 export const update = (id, data, onSuccess) => dispatch => {
     data = formateData(data)
-    api.student().update(id, data)
+    api.students().update(id, data)
         .then(res => {
             dispatch({
                 type: ACTION_TYPES.UPDATE,
@@ -50,7 +50,7 @@ export const update = (id, data, onSuccess) => dispatch => {
 }
 
 export const Delete = (id, onSuccess) => dispatch => {
-    api.student().delete(id)
+    api.students().delete(id)
         .then(res => {
             dispatch({
                 type: ACTION_TYPES.DELETE,
