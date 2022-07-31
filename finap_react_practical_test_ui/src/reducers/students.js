@@ -1,6 +1,10 @@
 import { ACTION_TYPES } from "../actions/student";
-export const student = (state = initialState, action) => {
 
+const initialState = {
+    list: []
+}
+
+export const student = (state = initialState, action) => {
     switch (action.type) {
         case ACTION_TYPES.FETCH_ALL:
             return {
@@ -25,7 +29,7 @@ export const student = (state = initialState, action) => {
                 ...state,
                 list: state.list.filter(x => x.id != action.payload)
             }
-
+       
         default:
             return state
     }
