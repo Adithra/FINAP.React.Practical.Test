@@ -1,3 +1,4 @@
+import { Grid } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
@@ -8,7 +9,12 @@ const Student = (props) => {
         props.fetchAllStudents()
     }, [])
 
-    return (<div>Test</div>);
+    return (
+        <Grid container>
+            <Grid item xs={6}>Form</Grid>
+            <Grid item xs={6}>Form Here</Grid>
+        </Grid>
+    );
 }
 
 const mapStateToProps = state => ({
