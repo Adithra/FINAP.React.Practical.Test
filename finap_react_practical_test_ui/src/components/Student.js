@@ -29,13 +29,13 @@ const Student = ({classes, ...props }) => {
 
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
-        if ('fullName' in fieldValues)
+        if ('fullName' in firstName)
             temp.fullName = fieldValues.firstName ? "" : "This field is required."
-        if ('mobile' in fieldValues)
+        if ('mobile' in lastName)
             temp.mobile = fieldValues.mobile ? "" : "This field is required."
-        if ('bloodGroup' in fieldValues)
+        if ('bloodGroup' in contactPerson)
             temp.bloodGroup = fieldValues.bloodGroup ? "" : "This field is required."
-        if ('email' in fieldValues)
+        if ('email' in emailAddress)
             temp.email = (/^$|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
         setErrors({
             ...temp
@@ -129,7 +129,7 @@ const Student = ({classes, ...props }) => {
                                     label="Age"
                                     value={values.age}
                                     onChange={handleInputChange}
-                                    {...(errors.email && { error: true, helperText: errors.dateOfBirth })}
+                                    {...(errors.email && { error: true, helperText: errors.age })}
                                 />
                             </Grid>
                             <div>
