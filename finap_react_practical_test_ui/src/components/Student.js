@@ -4,6 +4,7 @@ import { connect } from "react-redux";
 import * as actions from "../actions/student";
 import { student } from "../reducers/students";
 import StudentList from "./StudentList";
+import commonform from "./commonform"
 
 const initialFieldValues = {
     firstName: '',
@@ -18,17 +19,10 @@ const initialFieldValues = {
 const Student = (props) => {
     const {
         values,
-        setValues
+        setValues,
+        handleInputChange
     } = useState(initialFieldValues)
 
-    const handleInputChange = e => {
-        const { name, value } = e.target
-        const fieldValue = { [name]: value }
-        setValues({
-            ...values,
-            ...fieldValue
-        })
-    }
 
 
     return (
