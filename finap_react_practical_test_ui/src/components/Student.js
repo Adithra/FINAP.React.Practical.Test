@@ -45,6 +45,45 @@ const Student = (props) => {
                                     value={values.firstName}
                                     onChange={handleInputChange}
                                 />
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.firstName}
+                                    onChange={handleInputChange}
+                                />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.firstName}
+                                    onChange={handleInputChange}
+                                />
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.firstName}
+                                    onChange={handleInputChange}
+                                />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.firstName}
+                                    onChange={handleInputChange}
+                                />
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.firstName}
+                                    onChange={handleInputChange}
+                                />
                             </Grid>
                         </Grid>
                     </ form>
