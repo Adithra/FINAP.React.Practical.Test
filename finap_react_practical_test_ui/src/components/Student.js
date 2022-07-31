@@ -45,6 +45,8 @@ const Student = (props) => {
                                     value={values.firstName}
                                     onChange={handleInputChange}
                                 />
+                            </Grid>
+                            <Grid item xs={6}>
                                 <TextField
                                     name="fName"
                                     variant="outlined"
@@ -59,6 +61,15 @@ const Student = (props) => {
                                     variant="outlined"
                                     label="Contact Person"
                                     value={values.contactPerson}
+                                    onChange={handleInputChange}
+                                />
+                            </Grid>
+                            <Grid item xs={6}>
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                    value={values.contactNo}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
