@@ -1,4 +1,4 @@
-import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
@@ -16,7 +16,7 @@ const Student = (props) => {
                     <form autoComplete="off" noValidate>
                         <Grid container>
                             <Grid item xs={6}>
-
+                                <TextField />
                             </Grid>
                         </Grid>
                     </ form>
