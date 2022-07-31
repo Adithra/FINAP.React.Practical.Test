@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from "react";
 
-const Commonform = (initialFieldValues) => {
+const Commonform = (initialFieldValues, validate) => {
     const [values, setValues] = useState(initialFieldValues)
+    const [errors, setErrors] = useState({})
 
     const handleInputChange = e => {
         const { name, value } = e.target
+        const fieldValue = { [name]: value }
         setValues({
             ...values,
-            [name]: value
+            ...fieldValue
         })
+        validate(fieldValue)
     }  
 
     const resetForm = () => {
@@ -20,6 +23,8 @@ const Commonform = (initialFieldValues) => {
     return {
         values,
         setValues,
+        errors,
+        setErrors,
         handleInputChange
     };
 }

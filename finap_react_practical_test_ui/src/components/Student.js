@@ -54,9 +54,11 @@ const Student = ({classes, ...props }) => {
     const {
         values,
         setValues,
+        errors,
+        setErrors,
         handleInputChange,
         resetForm
-    } = commonform(initialFieldValues)
+    } = commonform(initialFieldValues, validate)
 
     const handleSubmit = e => {
         e.preventDefault()       
