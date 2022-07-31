@@ -52,7 +52,7 @@ export const update = (id, data, onSuccess) => dispatch => {
 }
 
 export const Delete = (id, onSuccess) => dispatch => {
-    api.student().delete(id)
+    api.dCandidate().delete(id)
         .then(res => {
             dispatch({
                 type: ACTION_TYPES.DELETE,
