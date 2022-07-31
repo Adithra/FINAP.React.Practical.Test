@@ -68,7 +68,7 @@ const Student = (props) => {
                                 <TextField
                                     name="fName"
                                     variant="outlined"
-                                    label="First Name"
+                                    label="Contact No"
                                     value={values.contactNo}
                                     onChange={handleInputChange}
                                 />
@@ -77,7 +77,7 @@ const Student = (props) => {
                                 <TextField
                                     name="emailAddress"
                                     variant="outlined"
-                                    label="First Name"
+                                    label="Email Address"
                                     value={values.emailAddress}
                                     onChange={handleInputChange}
                                 />
