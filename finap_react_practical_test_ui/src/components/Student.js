@@ -61,7 +61,10 @@ const Student = ({classes, ...props }) => {
     } = commonform(initialFieldValues, validate)
 
     const handleSubmit = e => {
-        e.preventDefault()       
+        e.preventDefault()     
+        if (validate()) {
+            props.createStudent(values, () => { window.alert('Inserted')})
+        }
     }
 
     return (
@@ -171,8 +174,8 @@ const mapStateToProps = state => ({
 })
 
 const mapActionToProps = {
-    createDCandidate: actions.create,
-    updateDCandidate: actions.update
+    createStudent: actions.create,
+    updateStudent: actions.update
 }
 
 export default connect(mapStateToProps, mapActionToProps) (Student);
