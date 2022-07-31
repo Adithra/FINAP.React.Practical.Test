@@ -33,10 +33,10 @@ const Student = ({classes, ...props }) => {
             temp.fullName = fieldValues.firstName ? "" : "This field is required."
         if ('lastName' in fieldValues)
             temp.mobile = fieldValues.lastName ? "" : "This field is required."
-        if ('bloodGroup' in fieldValues)
-            temp.bloodGroup = fieldValues.bloodGroup ? "" : "This field is required."
-        if ('email' in fieldValues)
-            temp.email = (/^$|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
+        if ('contactPerson' in fieldValues)
+            temp.bloodGroup = fieldValues.contactPerson ? "" : "This field is required."
+        if ('emailAddress' in fieldValues)
+            temp.email = (/^$|.+@.+..+/).test(fieldValues.emailAddress) ? "" : "Email is not valid."
         setErrors({
             ...temp
         })
