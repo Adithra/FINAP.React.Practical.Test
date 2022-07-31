@@ -171,7 +171,8 @@ const mapStateToProps = state => ({
 })
 
 const mapActionToProps = {
-    fetchAllStudents: actions.fetchAll
+    createDCandidate: actions.create,
+    updateDCandidate: actions.update
 }
 
 export default connect(mapStateToProps, mapActionToProps) (Student);
