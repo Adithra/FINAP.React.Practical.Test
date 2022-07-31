@@ -1,4 +1,4 @@
-import { createTheme, Grid, Paper,  TextField } from "@mui/material";
+import { Button, createTheme, Grid, Paper,  TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
@@ -102,6 +102,20 @@ const Student = ({classes, ...props }) => {
                                     onChange={handleInputChange}
                                 />
                             </Grid>
+                            <div>
+                                <Button
+                                    variant="contained"
+                                    color="primary"
+                                    type="submit"
+                                >
+                                    Submit
+                                </Button>
+                                <Button
+                                    variant="contained"
+                                >
+                                    Reset
+                                </Button>
+                            </div>
                         </Grid>
                     </ form>
                 </Grid>
