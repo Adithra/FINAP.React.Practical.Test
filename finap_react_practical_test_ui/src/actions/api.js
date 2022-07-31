@@ -5,7 +5,7 @@ const baseUrl = "https://localhost:44314/api/"
 
 export default {
 
-    student(url = baseUrl + 'student/') {
+    student(url = baseUrl + 'Students/') {
         return {
             fetchAll: () => axios.get(url),
             fetchById: id => axios.get(url + id),

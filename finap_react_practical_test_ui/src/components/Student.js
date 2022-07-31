@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
+import { student } from "../reducers/students";
 
-const Student = ({ props }) => {   
-    return (
-       <div>Test</div>
-    );
+const Student = (props) => {
+    useEffect(() => {
+        props.fetchAllStudents()
+    }, [])
+
+    return (<div>Test</div>);
 }
 
 const mapStateToProps = state => ({
