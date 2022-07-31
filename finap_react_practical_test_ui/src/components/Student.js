@@ -34,6 +34,11 @@ const Student = ({classes, ...props }) => {
         resetForm
     } = commonform(initialFieldValues)
 
+    const handleSubmit = e => {
+        e.preventDefault()       
+    }
+
+
     return (
         <Paper>
             <Grid container>
@@ -42,7 +47,7 @@ const Student = ({classes, ...props }) => {
                         <Grid container>
                             <Grid item xs={6}>
                                 <TextField fullWidth
-                                    name="fName"
+                                    name="firstName"
                                     variant="outlined"
                                     label="First Name"
                                     value={values.firstName}
