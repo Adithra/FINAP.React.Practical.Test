@@ -90,6 +90,8 @@ const Student = (props) => {
                                     value={values.firstName}
                                     onChange={handleInputChange}
                                 />
+                            </Grid>
+                            <Grid item xs={6}>
                                 <TextField
                                     name="fName"
                                     variant="outlined"
