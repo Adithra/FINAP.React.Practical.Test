@@ -86,7 +86,7 @@ const Student = (props) => {
                                 <TextField
                                     name="dateOfBirth"
                                     variant="outlined"
-                                    label="First Name"
+                                    label="Date of Birth"
                                     value={values.dateOfBirth}
                                     onChange={handleInputChange}
                                 />
