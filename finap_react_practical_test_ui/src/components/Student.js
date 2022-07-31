@@ -87,7 +87,7 @@ const Student = (props) => {
                                     name="fName"
                                     variant="outlined"
                                     label="First Name"
-                                    value={values.firstName}
+                                    value={values.dateOfBirth}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
@@ -96,7 +96,7 @@ const Student = (props) => {
                                     name="fName"
                                     variant="outlined"
                                     label="First Name"
-                                    value={values.firstName}
+                                    value={values.age}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
