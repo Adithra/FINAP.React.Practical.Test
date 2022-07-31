@@ -35,8 +35,6 @@ const Student = ({classes, ...props }) => {
             temp.mobile = fieldValues.lastName ? "" : "This field is required."
         if ('contactPerson' in fieldValues)
             temp.bloodGroup = fieldValues.contactPerson ? "" : "This field is required."
-        if ('contactNo' in fieldValues)
-            temp.bloodGroup = fieldValues.contactNo ? "" : "This field is required."
         if ('emailAddress' in fieldValues)
             temp.email = (/^$|.+@.+..+/).test(fieldValues.emailAddress) ? "" : "Email is not valid."
         setErrors({
