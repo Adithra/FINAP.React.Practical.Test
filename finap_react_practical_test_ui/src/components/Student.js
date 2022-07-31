@@ -38,12 +38,11 @@ const Student = ({classes, ...props }) => {
         e.preventDefault()       
     }
 
-
     return (
         <Paper>
             <Grid container>
                 <Grid item xs={6}>
-                    <form autoComplete="off" noValidate className={theme.root}>
+                    <form autoComplete="off" noValidate className={theme.root} onSubmit={handleSubmit}>
                         <Grid container>
                             <Grid item xs={6}>
                                 <TextField fullWidth
