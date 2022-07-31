@@ -3,11 +3,22 @@ import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
 import { student } from "../reducers/students";
+import StudentList from "./StudentList";
+
+const initialFieldValues = {
+    fullName: '',
+    mobile: '',
+    email: '',
+    age: '',
+    bloodGroup: '',
+    address: ''
+}
 
 const Student = (props) => {
-    useEffect(() => {
-        props.fetchAllStudents()
-    }, [])
+    const {
+        values,
+        setValues
+    } = useState(initialFieldValues)
 
     return (
         <Paper>
@@ -26,38 +37,7 @@ const Student = (props) => {
                     </ form>
                 </Grid>
                 <Grid item xs={6}>
-                    <TableContainer>
-                        <Table>
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell>First Name</TableCell>
-                                    <TableCell>Last Name</TableCell>
-                                    <TableCell>Contact Person</TableCell>
-                                    <TableCell>Contact No.</TableCell>
-                                    <TableCell>Email Address</TableCell>
-                                    <TableCell>DateOfBirth</TableCell>
-                                    <TableCell>Age</TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {
-                                    props.studentsList.map((record, index) => {
-                                        return (
-                                            <TableRow key={index} hover>
-                                                <TableCell>{record.firstName}</TableCell>
-                                                <TableCell>{record.lastName}</TableCell>
-                                                <TableCell>{record.contactPerson}</TableCell>
-                                                <TableCell>{record.contactNo}</TableCell>
-                                                <TableCell>{record.emailAddress}</TableCell>
-                                                <TableCell>{record.dateOfBirth}</TableCell>
-                                                <TableCell>{record.age}</TableCell>
-                                                <TableCell>{record.classroomID}</TableCell>
-                                            </TableRow>)
-                                    })
-                                }
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                  <StudentList />
                 </Grid>
             </Grid>
         </Paper>
