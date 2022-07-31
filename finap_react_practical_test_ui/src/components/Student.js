@@ -48,7 +48,7 @@ const Student = (props) => {
                             </Grid>
                             <Grid item xs={6}>
                                 <TextField
-                                    name="fName"
+                                    name="lastName"
                                     variant="outlined"
                                     label="Last Name"
                                     value={values.lastName}
