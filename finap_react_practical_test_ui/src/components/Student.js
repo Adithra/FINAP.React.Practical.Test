@@ -21,7 +21,7 @@ const Student = (props) => {
         values,
         setValues,
         handleInputChange
-    } = useState(initialFieldValues)
+    } = commonform(initialFieldValues)
 
 
 
