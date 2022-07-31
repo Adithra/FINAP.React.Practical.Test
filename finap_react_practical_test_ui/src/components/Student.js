@@ -6,6 +6,22 @@ import { student } from "../reducers/students";
 import StudentList from "./StudentList";
 import commonform from "./commonform"
 
+const styles = theme => ({
+    root: {
+        '& .MuiTextField-root': {
+            margin: theme.spacing(1),
+            minWidth: 230,
+        }
+    },
+    formControl: {
+        margin: theme.spacing(1),
+        minWidth: 230,
+    },
+    smMargin: {
+        margin: theme.spacing(1)
+    }
+})
+
 const initialFieldValues = {
     firstName: '',
     lastName: '',
