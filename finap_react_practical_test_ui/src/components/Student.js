@@ -12,7 +12,9 @@ const Student = (props) => {
     return (
         <Paper>
             <Grid container>
-                <Grid item xs={6}>Form</Grid>
+                <Grid item xs={6}>
+                    <form autoComplete="off" noValidate></ form>
+                </Grid>
                 <Grid item xs={6}>
                     <TableContainer>
                         <Table>
