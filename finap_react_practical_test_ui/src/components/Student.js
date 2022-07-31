@@ -1,4 +1,4 @@
-import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, withStyles } from "@mui/material";
+import { createTheme, Grid, Paper,  TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
@@ -6,21 +6,15 @@ import { student } from "../reducers/students";
 import StudentList from "./StudentList";
 import commonform from "./commonform"
 
-const styles = theme => ({
+const theme = createTheme({
     root: {
         '& .MuiTextField-root': {
-            margin: theme.spacing(1),
-            minWidth: 230,
+            spacing: 1,
+            minWidth: 230
         }
-    },
-    formControl: {
-        margin: theme.spacing(1),
-        minWidth: 230,
-    },
-    smMargin: {
-        margin: theme.spacing(1)
     }
-})
+});
+
 
 const initialFieldValues = {
     firstName: '',
@@ -32,20 +26,18 @@ const initialFieldValues = {
     age: ''
 }
 
-const Student = (props) => {
+const Student = ({classes, ...props }) => {
     const {
         values,
         setValues,
         handleInputChange
     } = commonform(initialFieldValues)
 
-
-
     return (
         <Paper>
             <Grid container>
                 <Grid item xs={6}>
-                    <form autoComplete="off" noValidate>
+                    <form autoComplete="off" noValidate className={theme.root}>
                         <Grid container>
                             <Grid item xs={6}>
                                 <TextField fullWidth
