@@ -48,8 +48,17 @@ const Student = (props) => {
                                 <TextField
                                     name="fName"
                                     variant="outlined"
-                                    label="First Name"
-                                    value={values.firstName}
+                                    label="Last Name"
+                                    value={values.lastName}
+                                    onChange={handleInputChange}
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField
+                                    name="contactPerson"
+                                    variant="outlined"
+                                    label="Contact Person"
+                                    value={values.contactPerson}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
@@ -58,14 +67,7 @@ const Student = (props) => {
                                     name="fName"
                                     variant="outlined"
                                     label="First Name"
-                                    value={values.firstName}
-                                    onChange={handleInputChange}
-                                />
-                                <TextField
-                                    name="fName"
-                                    variant="outlined"
-                                    label="First Name"
-                                    value={values.firstName}
+                                    value={values.contactNo}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
