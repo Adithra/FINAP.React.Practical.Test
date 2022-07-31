@@ -16,7 +16,11 @@ const Student = (props) => {
                     <form autoComplete="off" noValidate>
                         <Grid container>
                             <Grid item xs={6}>
-                                <TextField />
+                                <TextField
+                                    name="fName"
+                                    variant="outlined"
+                                    label="First Name"
+                                />
                             </Grid>
                         </Grid>
                     </ form>
