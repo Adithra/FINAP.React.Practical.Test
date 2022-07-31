@@ -13,7 +13,13 @@ const Student = (props) => {
         <Paper>
             <Grid container>
                 <Grid item xs={6}>
-                    <form autoComplete="off" noValidate></ form>
+                    <form autoComplete="off" noValidate>
+                        <Grid container>
+                            <Grid item xs={6}>
+
+                            </Grid>
+                        </Grid>
+                    </ form>
                 </Grid>
                 <Grid item xs={6}>
                     <TableContainer>
