@@ -47,7 +47,7 @@ const Student = ({classes, ...props }) => {
                         <Grid container>
                             <Grid item xs={6}>
                                 <TextField fullWidth
-                                    name="firstName"
+                                    name="fName"
                                     variant="outlined"
                                     label="First Name"
                                     value={values.firstName}
