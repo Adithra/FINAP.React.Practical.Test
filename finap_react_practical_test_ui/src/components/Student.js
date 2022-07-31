@@ -15,7 +15,6 @@ const theme = createTheme({
     }
 });
 
-
 const initialFieldValues = {
     firstName: '',
     lastName: '',
@@ -27,6 +26,25 @@ const initialFieldValues = {
 }
 
 const Student = ({classes, ...props }) => {
+
+    const validate = (fieldValues = values) => {
+        let temp = { ...errors }
+        if ('fullName' in fieldValues)
+            temp.fullName = fieldValues.fullName ? "" : "This field is required."
+        if ('mobile' in fieldValues)
+            temp.mobile = fieldValues.mobile ? "" : "This field is required."
+        if ('bloodGroup' in fieldValues)
+            temp.bloodGroup = fieldValues.bloodGroup ? "" : "This field is required."
+        if ('email' in fieldValues)
+            temp.email = (/^$|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
+        setErrors({
+            ...temp
+        })
+
+        if (fieldValues == values)
+            return Object.values(temp).every(x => x == "")
+    }
+
     const {
         values,
         setValues,
