@@ -1,8 +1,10 @@
-import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
+import { Button, ButtonGroup, Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
 import { student } from "../reducers/students";
+import EditIcon from "@mui/icons-material/Edit";
+import DeleteIcon from "@mui/icons-material/Delete";
 
 const Student = (props) => {
     useEffect(() => {
@@ -36,6 +38,14 @@ const Student = (props) => {
                                     <TableCell>{record.dateOfBirth}</TableCell>
                                     <TableCell>{record.age}</TableCell>
                                     <TableCell>{record.classroomID}</TableCell>
+                                    <TableCell>
+                                        <ButtonGroup variant="text">
+                                            <Button><EditIcon color="primary"
+                                               /></Button>
+                                            <Button><DeleteIcon color="secondary"
+                                                /></Button>
+                                        </ButtonGroup>
+                                    </TableCell>
                                 </TableRow>)
                         })
                     }
