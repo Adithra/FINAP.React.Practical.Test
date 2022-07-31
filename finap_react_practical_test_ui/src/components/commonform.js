@@ -11,6 +11,12 @@ const Commonform = (initialFieldValues) => {
         })
     }  
 
+    const resetForm = () => {
+        setValues({
+            ...initialFieldValues
+        })
+    }
+
     return {
         values,
         setValues,
