@@ -21,6 +21,16 @@ const Student = (props) => {
         setValues
     } = useState(initialFieldValues)
 
+    const handleInputChange = e => {
+        const { name, value } = e.target
+        const fieldValue = { [name]: value }
+        setValues({
+            ...values,
+            ...fieldValue
+        })
+    }
+
+
     return (
         <Paper>
             <Grid container>
@@ -33,6 +43,7 @@ const Student = (props) => {
                                     variant="outlined"
                                     label="First Name"
                                     value={values.firstName}
+                                    onChange={handleInputChange}
                                 />
                             </Grid>
                         </Grid>
