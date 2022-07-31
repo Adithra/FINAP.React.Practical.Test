@@ -92,7 +92,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField fullWidth
+                                <TextField
                                     name="age"
                                     variant="outlined"
                                     label="Age"
