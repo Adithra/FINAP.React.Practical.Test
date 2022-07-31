@@ -3,7 +3,6 @@ import axios from "axios";
 const baseUrl = "https://localhost:44314/api/"
 
 
-
 export default {
 
     student(url = baseUrl + 'student/') {

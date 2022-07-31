@@ -8,7 +8,7 @@ import Student from './components/Student';
 function App() {
     return (
         <Provider store={store}>
-                    <Student />
+            <Student />
         </Provider>
     );
 }
