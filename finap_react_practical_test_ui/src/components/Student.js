@@ -1,4 +1,4 @@
-import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField } from "@mui/material";
+import { Grid, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, TextField, withStyles    } from "@mui/material";
 import React, { useState, useEffect } from "react";
 import { connect } from "react-redux";
 import * as actions from "../actions/student";
@@ -21,7 +21,7 @@ const Student = (props) => {
         values,
         setValues,
         handleInputChange
-    } = useState(initialFieldValues)
+    } = commonform(initialFieldValues)
 
 
 
