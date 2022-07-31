@@ -95,7 +95,7 @@ const Student = (props) => {
                                 <TextField
                                     name="age"
                                     variant="outlined"
-                                    label="First Name"
+                                    label="Age"
                                     value={values.age}
                                     onChange={handleInputChange}
                                 />
