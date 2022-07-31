@@ -30,7 +30,8 @@ const Student = ({classes, ...props }) => {
     const {
         values,
         setValues,
-        handleInputChange
+        handleInputChange,
+        resetForm
     } = commonform(initialFieldValues)
 
     return (
@@ -112,6 +113,7 @@ const Student = ({classes, ...props }) => {
                                 </Button>
                                 <Button
                                     variant="contained"
+                                    onClick={resetForm}
                                 >
                                     Reset
                                 </Button>
