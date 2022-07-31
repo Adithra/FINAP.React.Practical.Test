@@ -30,7 +30,7 @@ const Student = ({classes, ...props }) => {
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
         if ('fullName' in fieldValues)
-            temp.fullName = fieldValues.fullName ? "" : "This field is required."
+            temp.fullName = fieldValues.firstName ? "" : "This field is required."
         if ('mobile' in fieldValues)
             temp.mobile = fieldValues.mobile ? "" : "This field is required."
         if ('bloodGroup' in fieldValues)
@@ -69,6 +69,7 @@ const Student = ({classes, ...props }) => {
                                     label="First Name"
                                     value={values.firstName}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.firstName })}
                                 />
                             </Grid>
                             <Grid item xs={6} >
@@ -78,6 +79,7 @@ const Student = ({classes, ...props }) => {
                                     label="Last Name"
                                     value={values.lastName}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.lastName })}
                                 />
                             </Grid>
                             <Grid item xs={12}>
@@ -87,6 +89,7 @@ const Student = ({classes, ...props }) => {
                                     label="Contact Person"
                                     value={values.contactPerson}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.email })}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -96,6 +99,7 @@ const Student = ({classes, ...props }) => {
                                     label="Contact No"
                                     value={values.contactNo}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.email })}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -105,6 +109,7 @@ const Student = ({classes, ...props }) => {
                                     label="Email Address"
                                     value={values.emailAddress}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.email })}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -114,6 +119,7 @@ const Student = ({classes, ...props }) => {
                                     label="Date of Birth"
                                     value={values.dateOfBirth}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.email })}
                                 />
                             </Grid>
                             <Grid item xs={6}>
@@ -123,6 +129,7 @@ const Student = ({classes, ...props }) => {
                                     label="Age"
                                     value={values.age}
                                     onChange={handleInputChange}
+                                    {...(errors.email && { error: true, helperText: errors.email })}
                                 />
                             </Grid>
                             <div>
