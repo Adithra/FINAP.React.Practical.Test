@@ -175,4 +175,4 @@ const mapActionToProps = {
     updateDCandidate: actions.update
 }
 
-export default connect(mapStateToProps, mapActionToProps) (Student);
+export default connect(mapStateToProps, mapActionToProps)(withStyles(styles)(Student));
