@@ -38,7 +38,7 @@ const Student = (props) => {
                     <form autoComplete="off" noValidate>
                         <Grid container>
                             <Grid item xs={6}>
-                                <TextField
+                                <TextField fullWidth
                                     name="fName"
                                     variant="outlined"
                                     label="First Name"
@@ -46,8 +46,8 @@ const Student = (props) => {
                                     onChange={handleInputChange}
                                 />
                             </Grid>
-                            <Grid item xs={6}>
-                                <TextField
+                            <Grid item xs={6} >
+                                <TextField fullWidth
                                     name="lastName"
                                     variant="outlined"
                                     label="Last Name"
@@ -56,7 +56,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={12}>
-                                <TextField
+                                <TextField fullWidth
                                     name="contactPerson"
                                     variant="outlined"
                                     label="Contact Person"
@@ -65,7 +65,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
+                                <TextField fullWidth
                                     name="fName"
                                     variant="outlined"
                                     label="Contact No"
@@ -74,7 +74,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
+                                <TextField fullWidth
                                     name="emailAddress"
                                     variant="outlined"
                                     label="Email Address"
@@ -83,7 +83,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
+                                <TextField fullWidth
                                     name="dateOfBirth"
                                     variant="outlined"
                                     label="Date of Birth"
@@ -92,7 +92,7 @@ const Student = (props) => {
                                 />
                             </Grid>
                             <Grid item xs={6}>
-                                <TextField
+                                <TextField fullWidth
                                     name="age"
                                     variant="outlined"
                                     label="Age"
