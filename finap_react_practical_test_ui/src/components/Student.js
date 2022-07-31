@@ -6,12 +6,13 @@ import { student } from "../reducers/students";
 import StudentList from "./StudentList";
 
 const initialFieldValues = {
-    fullName: '',
-    mobile: '',
-    email: '',
-    age: '',
-    bloodGroup: '',
-    address: ''
+    firstName: '',
+    lastName: '',
+    contactPerson: '',
+    contactNo: '',
+    emailAddress: '',
+    dateOfBirth: '',
+    age: ''
 }
 
 const Student = (props) => {
@@ -31,6 +32,7 @@ const Student = (props) => {
                                     name="fName"
                                     variant="outlined"
                                     label="First Name"
+                                    value={values.firstName}
                                 />
                             </Grid>
                         </Grid>
