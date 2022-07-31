@@ -75,16 +75,16 @@ const Student = (props) => {
                             </Grid>
                             <Grid item xs={6}>
                                 <TextField
-                                    name="fName"
+                                    name="emailAddress"
                                     variant="outlined"
                                     label="First Name"
-                                    value={values.contactNo}
+                                    value={values.emailAddress}
                                     onChange={handleInputChange}
                                 />
                             </Grid>
                             <Grid item xs={6}>
                                 <TextField
-                                    name="fName"
+                                    name="dateOfBirth"
                                     variant="outlined"
                                     label="First Name"
                                     value={values.dateOfBirth}
@@ -93,7 +93,7 @@ const Student = (props) => {
                             </Grid>
                             <Grid item xs={6}>
                                 <TextField
-                                    name="fName"
+                                    name="age"
                                     variant="outlined"
                                     label="First Name"
                                     value={values.age}
