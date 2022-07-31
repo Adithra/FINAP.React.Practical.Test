@@ -30,9 +30,8 @@ const Student = (props) => {
                             <TableBody>
                                 {
                                     props.studentsList.map((record, index) => {
-                                        return
-                                        (
-                                            <TableRow key={index} hover>
+                                        return (
+                                            <TableRow key={index} >
                                                 <TableCell>{record.firstName}</TableCell>
                                                 <TableCell>{record.lastName}</TableCell>
                                                 <TableCell>{record.contactPerson}</TableCell>
@@ -41,8 +40,7 @@ const Student = (props) => {
                                                 <TableCell>{record.dateOfBirth}</TableCell>
                                                 <TableCell>{record.age}</TableCell>
                                                 <TableCell>{record.classroomID}</TableCell>
-                                            </TableRow>
-                                        )
+                                            </TableRow>)
                                     })
                                 }
                             </TableBody>
@@ -54,9 +52,11 @@ const Student = (props) => {
     );
 }
 
-const mapStateToProps = state => ({
-    studentsList: state.student.list
-})
+const mapStateToProps = state => (
+    {
+        studentsList: state.student.list
+    }
+)
 
 const mapActionToProps = {
     fetchAllStudents: actions.fetchAll
