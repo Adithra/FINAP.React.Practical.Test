@@ -7,9 +7,14 @@ import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
 const Student = (props) => {
+    const [currentId, setCurrentId] = useState(0)
+
     useEffect(() => {
         props.fetchAllStudents()
     }, [])
+
+    const onDelete = id => {
+    }
 
     return (
         <TableContainer>
@@ -41,9 +46,9 @@ const Student = (props) => {
                                     <TableCell>
                                         <ButtonGroup variant="text">
                                             <Button><EditIcon color="primary"
-                                               /></Button>
+                                                onClick={() => { setCurrentId(record.id) }} /></Button>
                                             <Button><DeleteIcon color="secondary"
-                                                /></Button>
+                                                onClick={() => onDelete(record.id)} /></Button>
                                         </ButtonGroup>
                                     </TableCell>
                                 </TableRow>)
