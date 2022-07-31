@@ -29,13 +29,13 @@ const Student = ({classes, ...props }) => {
 
     const validate = (fieldValues = values) => {
         let temp = { ...errors }
-        if ('fullName' in firstName)
+        if ('firstName' in fieldValues)
             temp.fullName = fieldValues.firstName ? "" : "This field is required."
-        if ('mobile' in lastName)
-            temp.mobile = fieldValues.mobile ? "" : "This field is required."
-        if ('bloodGroup' in contactPerson)
+        if ('lastName' in fieldValues)
+            temp.mobile = fieldValues.lastName ? "" : "This field is required."
+        if ('bloodGroup' in fieldValues)
             temp.bloodGroup = fieldValues.bloodGroup ? "" : "This field is required."
-        if ('email' in emailAddress)
+        if ('email' in fieldValues)
             temp.email = (/^$|.+@.+..+/).test(fieldValues.email) ? "" : "Email is not valid."
         setErrors({
             ...temp
