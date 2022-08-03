@@ -42,6 +42,7 @@ const Student = ({classes, ...props }) => {
         if ('age' in fieldValues)
             temp.age = fieldValues.age ? "" : "This field is required."
         if ('emailAddress' in fieldValues)
+            temp.emailAddress = fieldValues.emailAddress ? "" : "This field is required."
             temp.emailAddress = (/^$|.+@.+..+/).test(fieldValues.emailAddress) ? "" : "Email is not valid."
         setErrors({
             ...temp
