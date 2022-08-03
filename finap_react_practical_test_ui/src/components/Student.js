@@ -61,13 +61,23 @@ const Student = ({classes, ...props }) => {
     } = commonform(initialFieldValues, validate, props.setCurrentId)
 
     const handleSubmit = e => {
-        e.preventDefault()     
+        e.preventDefault()
         if (validate()) {
             if (props.currentId == 0)
                 props.createStudent(values, onSuccess)
             else
-                props.updateStudent(props.currentId, values, onSuccess)        }
+                props.updateStudent(props.currentId, values, onSuccess)
+        }
     }
+
+    useEffect(() => {
+        if (props.currentId != 0) {
+            setValues({
+                ...props.studentsList.find(x => x.id == props.currentId)
+            })
+            setErrors({})
+        }
+    }, [props.currentId])
 
     return (
         <form autoComplete="off" noValidate className={theme.root} onSubmit={handleSubmit}>
