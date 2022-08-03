@@ -17,6 +17,12 @@ const Student = (props) => {
     }
 
     return (
+        <Paper>
+            <Grid container>
+                <Grid item xs={6}>
+                    <StudentList />
+                </Grid>
+                <Grid item xs={6}>
         <TableContainer>
             <Table>
                 <TableHead>
@@ -57,7 +63,10 @@ const Student = (props) => {
                 </TableBody>
             </Table>
         </TableContainer>
-    );
+                </Grid>
+            </Grid>
+        </Paper>
+                    );
 }
 
 const mapStateToProps = state => ({
