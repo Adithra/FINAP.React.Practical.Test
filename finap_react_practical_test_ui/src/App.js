@@ -4,16 +4,15 @@ import './App.css';
 import { store } from "./actions/store";
 import { Provider } from "react-redux";
 import Student from './components/Student';
-import { Container } from '@mui/material';
 import StudentList from './components/StudentList';
 import 'bootstrap/dist/css/bootstrap.css';
 
 function App() {
     return (
         <Provider store={store}>
-            <Container maxWidth="lg">
+            <div className="container">
                 <StudentList />
-            </Container>
+            </div>
         </Provider>
     );
 }
