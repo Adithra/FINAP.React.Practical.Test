@@ -63,6 +63,9 @@ const Student = ({classes, ...props }) => {
     const handleSubmit = e => {
         e.preventDefault()
         if (validate()) {
+            const onSuccess = () => {
+                resetForm()                
+            }
             if (props.currentId == 0)
                 props.createStudent(values, onSuccess)
             else

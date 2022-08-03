@@ -5,6 +5,7 @@ import * as actions from "../actions/student";
 import { student } from "../reducers/students";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
+import Student from "./Student";
 
 const StudentView = ({ classes, ...props }) => {
     const [currentId, setCurrentId] = useState(0)
@@ -15,7 +16,7 @@ const StudentView = ({ classes, ...props }) => {
 
     const onDelete = id => {
         if (window.confirm('Are you sure to delete this record?'))
-            props.deleteDCandidate(id, () => addToast("Deleted successfully", { appearance: 'info' }))
+            props.deleteDCandidate(id)
     }
 
     return (
@@ -80,4 +81,4 @@ const mapActionToProps = {
     deleteDCandidate: actions.Delete
 }
 
-export default connect(mapStateToProps, mapActionToProps)(Student);
+export default connect(mapStateToProps, mapActionToProps)(StudentView);

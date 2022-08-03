@@ -39,7 +39,7 @@ namespace FINAP___React_Practical_Test
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseCors(options => options.WithOrigins("http://localhost:3001")
+            app.UseCors(options => options.WithOrigins("http://localhost:3000")
             .AllowAnyHeader()
             .AllowAnyMethod());
             if (env.IsDevelopment())
