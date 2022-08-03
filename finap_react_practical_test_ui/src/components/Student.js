@@ -5,15 +5,27 @@ import * as actions from "../actions/student";
 import { student } from "../reducers/students";
 import StudentList from "./StudentList";
 import commonform from "./commonform"
+import { ThemeProvider } from "@emotion/react";
+import { colors } from "@mui/material";
 
 const theme = createTheme({
-    root: {
-        '& .MuiTextField-root': {
-            spacing: 1,
-            minWidth: 230
-        }
-    }
+    palette: {
+        primary: {
+            light: '#757ce8',
+            main: '#3f50b5',
+            dark: '#002884',
+            contrastText: '#fff',
+        },
+        secondary: {
+            light: '#ff7961',
+            main: '#f44336',
+            dark: '#ba000d',
+            contrastText: '#000',
+        },
+    },
 });
+
+theme.spacing(2);
 
 const initialFieldValues = {
     firstName: '',
@@ -85,19 +97,21 @@ const Student = ({classes, ...props }) => {
 
     return (
         <form autoComplete="off" noValidate className={theme.root} onSubmit={handleSubmit}>
-            <Grid container>
-                <Grid item xs={6}>
-                    <TextField fullWidth
-                        name="firstName"
-                        variant="outlined"
-                        label="First Name"
-                        value={values.firstName}
-                        onChange={handleInputChange}
-                        {...(errors.firstName && { error: true, helperText: errors.firstName })}
-                    />
-                </Grid>
-                <Grid item xs={6} >
-                    <TextField fullWidth
+            <ThemeProvider theme={theme}>
+                <Grid container>
+                    <Grid item xs={6}>
+                        <TextField 
+                            name="firstName"
+                            variant="outlined"
+                            label="First Name"
+                            className="container-fluid"
+                            value={values.firstName}
+                            onChange={handleInputChange}
+                            {...(errors.firstName && { error: true, helperText: errors.firstName })}
+                        />
+                    </Grid>
+                    <Grid item xs={6} >
+                    <TextField 
                         name="lastName"
                         variant="outlined"
                         label="Last Name"
@@ -107,7 +121,7 @@ const Student = ({classes, ...props }) => {
                     />
                 </Grid>
                 <Grid item xs={12}>
-                    <TextField fullWidth
+                    <TextField 
                         name="contactPerson"
                         variant="outlined"
                         label="Contact Person"
@@ -117,7 +131,7 @@ const Student = ({classes, ...props }) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <TextField fullWidth
+                    <TextField 
                         name="contactNo"
                         variant="outlined"
                         label="Contact No"
@@ -128,7 +142,7 @@ const Student = ({classes, ...props }) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <TextField fullWidth
+                    <TextField 
                         name="emailAddress"
                         variant="outlined"
                         label="Email Address"
@@ -138,7 +152,7 @@ const Student = ({classes, ...props }) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <TextField fullWidth
+                    <TextField 
                         name="dateOfBirth"
                         variant="outlined"
                         label="Date of Birth"
@@ -148,7 +162,7 @@ const Student = ({classes, ...props }) => {
                     />
                 </Grid>
                 <Grid item xs={6}>
-                    <TextField fullWidth
+                    <TextField 
                         name="age"
                         variant="outlined"
                         label="Age"
@@ -173,8 +187,9 @@ const Student = ({classes, ...props }) => {
                         Reset
                     </Button>
                 </div>
-            </Grid>
-        </ form>
+                </Grid>
+        </ThemeProvider>
+            </ form>
     );
 }
 
