@@ -92,7 +92,7 @@ const Student = ({classes, ...props }) => {
                         label="First Name"
                         value={values.firstName}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.firstName })}
+                        {...(errors.firstName && { error: true, helperText: errors.firstName })}
                     />
                 </Grid>
                 <Grid item xs={6} >
@@ -102,7 +102,7 @@ const Student = ({classes, ...props }) => {
                         label="Last Name"
                         value={values.lastName}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.lastName })}
+                        {...(errors.lastName && { error: true, helperText: errors.lastName })}
                     />
                 </Grid>
                 <Grid item xs={12}>
@@ -112,7 +112,7 @@ const Student = ({classes, ...props }) => {
                         label="Contact Person"
                         value={values.contactPerson}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.contactPerson })}
+                        {...(errors.contactPerson && { error: true, helperText: errors.contactPerson })}
                     />
                 </Grid>
                 <Grid item xs={6}>
