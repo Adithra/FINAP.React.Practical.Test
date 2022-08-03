@@ -123,7 +123,7 @@ const Student = ({classes, ...props }) => {
                         type="number"
                         value={values.contactNo}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.contactNo })}
+                        {...(errors.contactNo && { error: true, helperText: errors.contactNo })}
                     />
                 </Grid>
                 <Grid item xs={6}>
@@ -133,7 +133,7 @@ const Student = ({classes, ...props }) => {
                         label="Email Address"
                         value={values.emailAddress}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.emailAddress })}
+                        {...(errors.emailAddress && { error: true, helperText: errors.emailAddress })}
                     />
                 </Grid>
                 <Grid item xs={6}>
@@ -143,7 +143,7 @@ const Student = ({classes, ...props }) => {
                         label="Date of Birth"
                         value={values.dateOfBirth}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.dateOfBirth })}
+                        {...(errors.dateOfBirth && { error: true, helperText: errors.dateOfBirth })}
                     />
                 </Grid>
                 <Grid item xs={6}>
@@ -154,7 +154,7 @@ const Student = ({classes, ...props }) => {
                         type="number"
                         value={values.age}
                         onChange={handleInputChange}
-                        {...(errors.email && { error: true, helperText: errors.age })}
+                        {...(errors.age && { error: true, helperText: errors.age })}
                     />
                 </Grid>
                 <div>
