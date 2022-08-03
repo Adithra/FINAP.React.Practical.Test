@@ -76,7 +76,8 @@ const mapStateToProps = state => ({
 })
 
 const mapActionToProps = {
-    fetchAllStudents: actions.fetchAll
+    fetchAllStudents: actions.fetchAll,
+    deleteDCandidate: actions.Delete
 }
 
 export default connect(mapStateToProps, mapActionToProps)(Student);
