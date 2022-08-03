@@ -48,7 +48,7 @@ namespace FINAP___React_Practical_Test.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutStudent(int id, Student student)
         {
-            if (id != student.StudentID)
+            if (id != student.id)
             {
                 return BadRequest();
             }
@@ -83,7 +83,7 @@ namespace FINAP___React_Practical_Test.Controllers
             _context.Students.Add(student);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetStudent", new { id = student.StudentID }, student);
+            return CreatedAtAction("GetStudent", new { id = student.id }, student);
         }
 
         // DELETE: api/Students/5
@@ -104,7 +104,7 @@ namespace FINAP___React_Practical_Test.Controllers
 
         private bool StudentExists(int id)
         {
-            return _context.Students.Any(e => e.StudentID == id);
+            return _context.Students.Any(e => e.id == id);
         }
     }
 }

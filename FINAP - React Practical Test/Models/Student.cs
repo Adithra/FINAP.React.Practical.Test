@@ -9,7 +9,7 @@ namespace FINAP___React_Practical_Test
     public partial class Student
     {
         [Key]
-        public int StudentID { get; set; }
+        public int id { get; set; }
 
         [Required]
         [StringLength(50)]
