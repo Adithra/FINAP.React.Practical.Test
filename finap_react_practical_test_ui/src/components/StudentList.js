@@ -17,46 +17,55 @@ const Student = (props) => {
     }
 
     return (
-        <TableContainer>
-            <Table>
-                <TableHead>
-                    <TableRow>
-                        <TableCell>First Name</TableCell>
-                        <TableCell>Last Name</TableCell>
-                        <TableCell>Contact Person</TableCell>
-                        <TableCell>Contact No.</TableCell>
-                        <TableCell>Email Address</TableCell>
-                        <TableCell>DateOfBirth</TableCell>
-                        <TableCell>Age</TableCell>
-                    </TableRow>
-                </TableHead>
-                <TableBody>
-                    {
-                        props.studentsList.map((record, index) => {
-                            return (
-                                <TableRow key={index} hover>
-                                    <TableCell>{record.firstName}</TableCell>
-                                    <TableCell>{record.lastName}</TableCell>
-                                    <TableCell>{record.contactPerson}</TableCell>
-                                    <TableCell>{record.contactNo}</TableCell>
-                                    <TableCell>{record.emailAddress}</TableCell>
-                                    <TableCell>{record.dateOfBirth}</TableCell>
-                                    <TableCell>{record.age}</TableCell>
-                                    <TableCell>{record.classroomID}</TableCell>
-                                    <TableCell>
-                                        <ButtonGroup variant="text">
-                                            <Button><EditIcon color="primary"
-                                                onClick={() => { setCurrentId(record.id) }} /></Button>
-                                            <Button><DeleteIcon color="secondary"
-                                                onClick={() => onDelete(record.id)} /></Button>
-                                        </ButtonGroup>
-                                    </TableCell>
-                                </TableRow>)
-                        })
-                    }
-                </TableBody>
-            </Table>
-        </TableContainer>
+        <Paper>
+            <Grid container>
+                <Grid item xs={6}>
+                    <TableContainer>
+                        <Table>
+                            <TableHead>
+                                <TableRow>
+                                    <TableCell>First Name</TableCell>
+                                    <TableCell>Last Name</TableCell>
+                                    <TableCell>Contact Person</TableCell>
+                                    <TableCell>Contact No.</TableCell>
+                                    <TableCell>Email Address</TableCell>
+                                    <TableCell>DateOfBirth</TableCell>
+                                    <TableCell>Age</TableCell>
+                                </TableRow>
+                            </TableHead>
+                            <TableBody>
+                                {
+                                    props.studentsList.map((record, index) => {
+                                        return (
+                                            <TableRow key={index} hover>
+                                                <TableCell>{record.firstName}</TableCell>
+                                                <TableCell>{record.lastName}</TableCell>
+                                                <TableCell>{record.contactPerson}</TableCell>
+                                                <TableCell>{record.contactNo}</TableCell>
+                                                <TableCell>{record.emailAddress}</TableCell>
+                                                <TableCell>{record.dateOfBirth}</TableCell>
+                                                <TableCell>{record.age}</TableCell>
+                                                <TableCell>{record.classroomID}</TableCell>
+                                                <TableCell>
+                                                    <ButtonGroup variant="text">
+                                                        <Button><EditIcon color="primary"
+                                                            onClick={() => { setCurrentId(record.id) }} /></Button>
+                                                        <Button><DeleteIcon color="secondary"
+                                                            onClick={() => onDelete(record.id)} /></Button>
+                                                    </ButtonGroup>
+                                                </TableCell>
+                                            </TableRow>)
+                                    })
+                                }
+                            </TableBody>
+                        </Table>
+                    </TableContainer>
+                </Grid>
+                <Grid item xs={6}>
+                    <StudentList />
+                </Grid>
+            </Grid>
+        </Paper>
     );
 }
 

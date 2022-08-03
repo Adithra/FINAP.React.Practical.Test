@@ -68,9 +68,6 @@ const Student = ({classes, ...props }) => {
     }
 
     return (
-        <Paper>
-            <Grid container>
-                <Grid item xs={6}>
                     <form autoComplete="off" noValidate className={theme.root} onSubmit={handleSubmit}>
                         <Grid container>
                             <Grid item xs={6}>
@@ -160,12 +157,7 @@ const Student = ({classes, ...props }) => {
                             </div>
                         </Grid>
                     </ form>
-                </Grid>
-                <Grid item xs={6}>
-                  <StudentList />
-                </Grid>
-            </Grid>
-        </Paper>
+
     );
 }
 
