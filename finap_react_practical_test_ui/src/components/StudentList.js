@@ -14,6 +14,8 @@ const StudentView = ({ classes, ...props }) => {
     }, [])
 
     const onDelete = id => {
+        if (window.confirm('Are you sure to delete this record?'))
+            props.deleteDCandidate(id, () => addToast("Deleted successfully", { appearance: 'info' }))
     }
 
     return (
