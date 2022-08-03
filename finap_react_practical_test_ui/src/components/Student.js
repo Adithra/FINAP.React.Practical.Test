@@ -120,6 +120,7 @@ const Student = ({classes, ...props }) => {
                         name="contactNo"
                         variant="outlined"
                         label="Contact No"
+                        type="number"
                         value={values.contactNo}
                         onChange={handleInputChange}
                         {...(errors.email && { error: true, helperText: errors.contactNo })}
@@ -150,6 +151,7 @@ const Student = ({classes, ...props }) => {
                         name="age"
                         variant="outlined"
                         label="Age"
+                        type="number"
                         value={values.age}
                         onChange={handleInputChange}
                         {...(errors.email && { error: true, helperText: errors.age })}
