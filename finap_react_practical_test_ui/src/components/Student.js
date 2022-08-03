@@ -63,8 +63,10 @@ const Student = ({classes, ...props }) => {
     const handleSubmit = e => {
         e.preventDefault()     
         if (validate()) {
-            props.createStudent(values, () => { window.alert('Inserted')})
-        }
+            if (props.currentId == 0)
+                props.createStudent(values, onSuccess)
+            else
+                props.updateStudent(props.currentId, values, onSuccess)        }
     }
 
     return (
