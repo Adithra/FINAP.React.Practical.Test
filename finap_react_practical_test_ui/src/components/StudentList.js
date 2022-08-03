@@ -6,7 +6,7 @@ import { student } from "../reducers/students";
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
 
-const Student = (props) => {
+const StudentView = ({ classes, ...props }) => {
     const [currentId, setCurrentId] = useState(0)
 
     useEffect(() => {
@@ -20,7 +20,7 @@ const Student = (props) => {
         <Paper>
             <Grid container>
                 <Grid item xs={6}>
-                    <StudentList  {...({ currentId, setCurrentId })} />
+                    <Student  {...({ currentId, setCurrentId })} />
                 </Grid>
                 <Grid item xs={6}>
                     <TableContainer>
