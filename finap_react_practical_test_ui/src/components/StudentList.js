@@ -22,12 +22,12 @@ const StudentView = ({ classes, ...props }) => {
     return (
         <Paper className="AddGap">
             <Grid container>
-                <Grid item xs={4}>
+                <Grid item xs={3}>
                     <div className="card">
                         <Student  {...({ currentId, setCurrentId })} />
                     </div>
                 </Grid>
-                <Grid item xs={8}>
+                <Grid item xs={9}>
                     <div className="card">
                         <TableContainer>
                             <Table className="table table-responsive ">
