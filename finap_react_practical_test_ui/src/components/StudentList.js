@@ -21,6 +21,7 @@ const StudentView = ({ classes, ...props }) => {
 
     return (
         <Paper className="AddGap">
+            <h1>Registration</h1>
             <Grid container>
                 <Grid item xs={3}>
                     <div className="card">
