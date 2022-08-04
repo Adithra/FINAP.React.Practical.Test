@@ -100,7 +100,7 @@ const Student = ({ classes, ...props }) => {
         <form autoComplete="off" noValidate className={theme.root} onSubmit={handleSubmit}>
             <ThemeProvider theme={theme}>
                 <Grid container>
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         <TextField
                             name="firstName"
                             variant="outlined"
@@ -111,7 +111,7 @@ const Student = ({ classes, ...props }) => {
                             {...(errors.firstName && { error: true, helperText: errors.firstName })}
                         />
                     </Grid>
-                    <Grid item xs={6} >
+                    <Grid item xs={12} >
                         <TextField
                             name="lastName"
                             variant="outlined"
@@ -133,7 +133,7 @@ const Student = ({ classes, ...props }) => {
                             {...(errors.contactPerson && { error: true, helperText: errors.contactPerson })}
                         />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         <TextField
                             name="contactNo"
                             variant="outlined"
@@ -145,7 +145,7 @@ const Student = ({ classes, ...props }) => {
                             {...(errors.contactNo && { error: true, helperText: errors.contactNo })}
                         />
                     </Grid>
-                    <Grid item xs={6}>
+                    <Grid item xs={12}>
                         <TextField
                             name="emailAddress"
                             variant="outlined"
