@@ -180,7 +180,8 @@ const Student = ({ classes, ...props }) => {
                             {...(errors.age && { error: true, helperText: errors.age })}
                         />
                     </Grid>
-                <Grid item xs={6}>
+                    <div className="row">
+                        <div className="col">
                             <Button
                                 variant="contained"
                                 color="primary"
@@ -189,15 +190,16 @@ const Student = ({ classes, ...props }) => {
                             >
                                 Submit
                             </Button>
-                        </Grid>
-                        <Grid item xs={6}>
+                        </div>
+                        <div className="col">
                             <Button
                                 variant="contained"
                                 onClick={resetForm}
                             >
                                 Reset
                             </Button>
-                        </Grid>
+                        </div>
+                    </div>
                 </Grid>
             </ThemeProvider>
         </ form>
